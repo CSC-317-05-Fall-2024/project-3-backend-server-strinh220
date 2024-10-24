@@ -3,28 +3,28 @@
 <html lang="en">
 
 <head>
-	<title>Travel Guide</title>
+	<title>Japan Travel Guide</title>
     <link rel="stylesheet" href="/styles.css"/>
     <link rel="stylesheet" href="/restaurant-details-styles.css"/>
-    <link rel="icon" type="image/png" href="images/icon.svg">
-
+    <link rel="icon" href="/images/japan.svg" type="image/svg+xml">
 </head>
 
 <body>
     <header></header>
     <nav></nav>
+
         <div class="restaurant-details">
-            <img class="restaurant-details-img" src="<%= photo %>">
+            <img class="restaurant-details-img" src="/<%= restaurant.photo %>" alt="<%= restaurant.name %>">
             <div>
-                <h1><%= name %></h1>
-                <h2><%= address %></h2>
-                <h2><%= phone %></h2>
+                <h1 class="restaurant-title"><%= restaurant.name %></h1>
+                <h2><%= restaurant.address %></h2>
+                <h2><%= restaurant.phone %></h2>
+                <a href="<%= restaurant.link %>" target="_blank">Visit the website here!</a>
             </div>
         </div>
 
-
-    <footer></footer>
+    <footer id="footer"></footer>
     <script src="/scripts/header.js"></script>
+    <script src="/scripts/restaurantCards.js"></script>
 </body>
-
 </html>
